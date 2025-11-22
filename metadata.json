@@ -1,0 +1,9 @@
+{
+  "name": "Copy of Kissan Dost - Hybrid AI Advisor",
+  "description": "An intelligent, multilingual agricultural advisory platform for farmers featuring crop disease detection, real-time market insights, and expert farming guidance.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

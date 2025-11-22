@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Kissan Dost AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              earth: {
+                50: '#f9f6f4',
+                100: '#f2e8e5',
+                200: '#eaddd7',
+                500: '#a07e6a',
+                800: '#5d4037',
+                900: '#3e2b24',
+              },
+              leaf: {
+                50: '#f0fdf4',
+                100: '#dcfce7',
+                500: '#22c55e',
+                600: '#16a34a',
+                700: '#15803d',
+                800: '#166534',
+                900: '#14532d',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              urdu: ['Noto Nastaliq Urdu', 'serif'],
+            },
+            animation: {
+              'drive-slow': 'drive 20s linear infinite',
+              'sway': 'sway 3s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+              drive: {
+                '0%': { transform: 'translateX(-120%)' },
+                '100%': { transform: 'translateX(120%)' },
+              },
+              sway: {
+                '0%, 100%': { transform: 'rotate(-5deg)' },
+                '50%': { transform: 'rotate(5deg)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for chat */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      body, html {
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        -webkit-text-size-adjust: 100%;
+        overscroll-behavior-y: none; /* Prevent pull-to-refresh/bounce on mobile */
+      }
+      #root {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-earth-50 text-gray-800 antialiased selection:bg-leaf-200 selection:text-leaf-900">
+    <div id="root"></div>
+  </body>
+</html>
